@@ -68,9 +68,9 @@ if ($ARGV[0] eq 'configure' || $ARGV[0] eq 'reconfigure') {
     close OUT or die "Unable to close output: $!,";
     rename ("/etc/krb5.conf.dpkg-new", "/etc/krb5.conf")
         or die "Unable to rename file: $!, stopped";
-    my$ add_servers = get ("krb5-config/add_servers");
+    my $add_servers = get ("krb5-config/add_servers");
   realm_config: {
-  if (($add_servers eq "true") and !$defrealm_in_conf ) {
+        if (($add_servers eq "true") and !$defrealm_in_conf) {
             my $servers = get ('krb5-config/kerberos_servers');
             reset ('krb5-config/kerberos_servers');
             last realm_config unless $servers;
@@ -94,7 +94,7 @@ if ($ARGV[0] eq 'configure' || $ARGV[0] eq 'reconfigure') {
                 or die "Unable to rename config file into place: $!, stopped";
         }
     }
-    }
+}
 
 
 # Run any additional debhelper commands.

@@ -1,16 +1,37 @@
+kerberos-configs (2.3) unstable; urgency=low
+
+  [ Sam Hartman ]
+  * Update utoronto.ca configuration, Closes: #587624
+
+  [ Russ Allbery ]
+  * Set the Kerberos admin server default from the SRV record if present,
+    and lower the priority to medium if we can guess from a SRV record.
+    (Closes: #576324)
+  * Update ANDREW.CMU.EDU configuration.  (Closes: #621875)
+  * Update DEMENTIA.ORG configuration.
+  * Update source package format to 3.0 (native).
+  * Update to debhelper compatibility level V9.
+  * Update standards version to 3.9.2 (no changes required).
+  * New translations:
+    - Danish, thanks Joe Hansen.  (Closes: #626530)
+    - Dutch, thanks Jeroen Schot.  (Closes: #654190)
+    - Fix formatting in all translation files, thanks Christian PERRIER.
+  
+ -- Russ Allbery <rra@debian.org>  Wed, 18 Jan 2012 21:16:20 -0800
+
 kerberos-configs (2.2) unstable; urgency=low
 
   * New translations:
-      - Swedish, Thanks Martin Bagge, Closes: #538046
-      - Galician, Thanks Marce, Closes: #538065
-        - Japanese, Thanks TANAKA, Atushi 
-        - Portuguese, Thanks Ricardo Silva , Closes: #538181
-          - Czech, Thanks Miroslav Kure, Closes: #538411
-      - Russion, Thanks Yuri Kozlov, Closes: #539180 
-        - Spanish, thanks Francisco Javier Cuadrado , Closes: #539635
-      - Italian, thanks Luca Monducci, Closes: #539500
-      - German, thanks Matthias Julius , Closes: #539439
-      - French, thanks Bruno Travouillon , Closes: #539419
+    - Swedish, Thanks Martin Bagge, Closes: #538046
+    - Galician, Thanks Marce, Closes: #538065
+    - Japanese, Thanks TANAKA, Atushi 
+    - Portuguese, Thanks Ricardo Silva , Closes: #538181
+    - Czech, Thanks Miroslav Kure, Closes: #538411
+    - Russion, Thanks Yuri Kozlov, Closes: #539180 
+    - Spanish, thanks Francisco Javier Cuadrado , Closes: #539635
+    - Italian, thanks Luca Monducci, Closes: #539500
+    - German, thanks Matthias Julius , Closes: #539439
+    - French, thanks Bruno Travouillon , Closes: #539419
   * Also check UDP SRV records not just TCP, Thanks Wouter Verhelst
 
  -- Sam Hartman <hartmans@debian.org>  Wed, 05 Aug 2009 10:06:53 -0400
@@ -20,18 +41,17 @@ kerberos-configs (2.1) experimental; urgency=low
   * New Russian debconf translations,  thanks Yuri Kozlov, Closes: #531123 
   * Remove krb4-config and Kerberos 4 support
   * Update packaging guidelines
-      - Remove Kerberos 4
-      - Include useful references for complicated topics.
+    - Remove Kerberos 4
+    - Include useful references for complicated topics.
   * New proposal for how config and postinst should run
-  *  Implement new method for krb5 configuration:
-      - Except in the case where a realm stanza already exists and we
-    don't support updating it, don't skip questions, Closes: #525577
+  * Implement new method for krb5 configuration:
+    - Except in the case where a realm stanza already exists and we
+      don't support updating it, don't skip questions, Closes: #525577
     - Auto detect srv records if /usr/bin/host is available, waiting until
-    postinst time if we have to to guarantee its availability, Closes:
-    #445059
-      - Use Kerberos TXT records to detect default realm through DNS,
-    Closes: #445063
-
+      postinst time if we have to to guarantee its availability,
+      Closes: #445059
+    - Use Kerberos TXT records to detect default realm through DNS,
+      Closes: #445063
 
  -- Sam Hartman <hartmans@debian.org>  Tue, 21 Jul 2009 10:56:12 -0400
 

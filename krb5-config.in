@@ -29,6 +29,16 @@ sub host_srv($) {
     return undef;
 }
 
+sub admin_srv($) {
+    my ($realm) = @_;
+    my $record = `host -t srv _kerberos-adm._tcp.\Q$realm\E 2>/dev/null`;
+    if ($record =~ /has srv record.* (\S+)\.\s*$/i) {
+        return $1;
+    } else {
+        return;
+    }
+}
+
 sub host_txt($) {
   my $fqdn = shift;
   my $res = `host -t txt "_kerberos.$fqdn" 2>/dev/null`;
@@ -143,8 +153,26 @@ if (!$realm_map{$guess}) {
   if ($ret eq 'true') {
     subst('krb5-config/kerberos_servers','realm', $guess);
     subst('krb5-config/admin_server', 'realm', $guess);
-        input('high','krb5-config/kerberos_servers');
-    input('high','krb5-config/admin_server');
+    input('high','krb5-config/kerberos_servers');
+
+    # Prompt for the admin server.  If we can guess it from a SRV record and
+    # we don't already have one set (from a previous debconf run), or if we do
+    # have one set but it matches our guess, this prompt should be medium so
+    # that we just trust SRV by default.  Otherwise, it's high.
+    #
+    # This is only necessary because libkadm5clnt (at least for MIT) doesn't
+    # honor SRV records.  Otherwise, we could just leave the admin server
+    # unset and everything would work in the presence of SRV records.
+    my $admin_default = get('krb5-config/admin_server');
+    my $admin = admin_srv($guess);
+    if (!$admin_default && $admin) {
+        set('krb5-config/admin_server', $admin);
+        input('medium', 'krb5-config/admin_server');
+    } elsif ($admin_default && $admin_default eq $admin) {
+        input('medium', 'krb5-config/admin_server');
+    } else {
+        input('high', 'krb5-config/admin_server');
+    }
     go();
   }
 }

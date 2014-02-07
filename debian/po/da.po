@@ -1,34 +1,32 @@
-# translation of po-debconf template to German
+# Danish translation kerberos-configs.
+# Copyright (c) 2011 kerberos-configs & nedenstående oversættere.
 # This file is distributed under the same license as the kerberos-configs package.
-# Copyright ©:
+# Joe Hansen <joedalton2@yahoo.dk>, 2011.
 #
-# Matthias Julius <mdeb@julius-net.net>, 2006, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: kerberos-configs 2.1\n"
+"Project-Id-Version: kerberos-configs\n"
 "Report-Msgid-Bugs-To: kerberos-configs@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-21 13:57-0400\n"
-"PO-Revision-Date: 2009-07-30 12:41-0400\n"
-"Last-Translator: Matthias Julius <mdeb@julius-net.net>\n"
-"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2011-05-12 17:30+01:00\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: title
 #. Description
 #: ../krb5-config.templates:1001
 msgid "Configuring Kerberos Authentication"
-msgstr "Konfiguration der Kerberos-Authentisierung"
+msgstr "Konfigurering af Kerberosgodkendelse"
 
 #. Type: string
 #. Description
 #: ../krb5-config.templates:2001
 msgid "Default Kerberos version 5 realm:"
-msgstr "Voreingestellter Realm für Kerberos Version 5:"
+msgstr "Standardområde for Kerberos version 5:"
 
 #. Type: string
 #. Description
@@ -40,21 +38,18 @@ msgid ""
 "used as the realm of a Kerberos service running on the local machine.  "
 "Often, the default realm is the uppercase version of the local DNS domain."
 msgstr ""
-"Wenn Benutzer versuchen, Kerberos zu nutzen und einen Principal oder "
-"Benutzernamen angeben, ohne dabei festzulegen, zu welchem Kerberos-"
-"Administrationsbereich (Realm) dieser Principal gehört, dann fügt das System "
-"den voreingestellten Realm an. Der voreingestellte Realm kann auch als Realm "
-"eines Kerberos-Dienstes verwendet werden, der auf dem lokalen Rechner läuft. "
-"Der voreingestellte Realm ist die großgeschriebene Version der lokalen DNS-"
-"Domain."
+"Når brugere forsøger at bruge Kerberos og angive en principal eller "
+"brugernavn uden at angive hvilket administrative Kerberosområde den "
+"principal tilhører, bruger systemet standardområdet. Standardområdet kan "
+"også blive brugt som området for en Kerberostjeneste, der kører på den "
+"lokale maskine. Ofte er standardområdet den samme version som det lokale DNS-"
+"domæne men med store bogstaver."
 
 #. Type: boolean
 #. Description
 #: ../krb5-config.templates:5001
 msgid "Add locations of default Kerberos servers to /etc/krb5.conf?"
-msgstr ""
-"Die Standorte der voreingestellten Kerberos-Server zu /etc/krb5.conf "
-"hinzufügen?"
+msgstr "Tilføj placeringer af standardservere for Kerberos til /etc/krb5.conf?"
 
 #. Type: boolean
 #. Description
@@ -63,8 +58,8 @@ msgid ""
 "Typically, clients find Kerberos servers for their default realm in the "
 "domain-name system. ${dns}"
 msgstr ""
-"Typischerweise finden Clients die Kerberos-Server für ihren voreingestellten "
-"Realm im Domain-Namen-System. ${dns}"
+"Typisk finder klienter Kerberosservere for deres standardområde i systemet "
+"for domænenavne. ${dns}"
 
 #. Type: text
 #. Description
@@ -72,7 +67,7 @@ msgstr ""
 #. Description
 #: ../krb5-config.templates:6001 ../krb5-config.templates:7001
 msgid "short description unused"
-msgstr "Kurzbeschreibung nicht verwendet"
+msgstr "kort beskrivelse er ikke brugt"
 
 #. Type: text
 #. Description
@@ -83,10 +78,10 @@ msgid ""
 "with Debian. You may add them to the Kerberos configuration file or add them "
 "to your DNS configuration."
 msgstr ""
-"Jedoch scheinen die Kerberos-Server für Ihren Realm weder im Domain-Namen-"
-"System noch in der Konfigurationsdatei für Kerberos, wie sie mit Debian "
-"installiert wurde, aufgeführt zu sein. Sie können sie zur "
-"Konfigurationsdatei von Kerberos oder zu Ihrer DNS-Konfiguration hinzufügen."
+"Kerberosservere for dit område ser dog ikke ud til at fremgå hverken i "
+"systemet for domænenavne eller i konfigurationsfilen for Kerberos, som "
+"fulgte med din Debian. Du kan tilføje dem til konfigurationsfilen for "
+"Kerberos eller tilføje dem til din DNS-konfiguration."
 
 #. Type: text
 #. Description
@@ -98,17 +93,17 @@ msgid ""
 "in special situations, you can locally configure the set of servers for your "
 "Kerberos realm."
 msgstr ""
-"Es wurden Server für Ihren Realm im DNS gefunden. Für die meisten "
-"Konfigurationen ist es am Besten, das DNS zum Auffinden dieser Server zu "
-"nutzen. Damit muss nicht jeder Rechner im Realm neu konfiguriert werden, "
-"falls sich die Server ändern. In besonderen Situationen können Sie jedoch "
-"die Server für Ihren Kerberos-Realm lokal konfigurieren."
+"Servere for dit område blev fundet i DNS. For de fleste konfigurationer er "
+"det bedst at bruge DNS til at finde disse servere, så at hvis serversættet "
+"for dit område ændrer sig, så skal du ikke konfigurere hver enkelt maskine "
+"om i området. I specielle situationer kan du dog lokalt konfigurere "
+"serversættet for dit Kerberosområde."
 
 #. Type: string
 #. Description
 #: ../krb5-config.templates:8001
 msgid "Kerberos servers for your realm:"
-msgstr "Kerberos-Server für Ihren Realm:"
+msgstr "Kerberosservere for dit område:"
 
 #. Type: string
 #. Description
@@ -117,14 +112,14 @@ msgid ""
 "Enter the hostnames of Kerberos servers in the ${realm} Kerberos realm "
 "separated by spaces."
 msgstr ""
-"Geben Sie die Hostnamen von Kerberos-Servern im Kerberos-Realm ${realm} "
-"durch Leerzeichen getrennt ein."
+"Indtast værtsnavnene på Kerberosservere i Kerberosområdet ${realm} adskilt "
+"af mellemrum."
 
 #. Type: string
 #. Description
 #: ../krb5-config.templates:9001
 msgid "Administrative server for your Kerberos realm:"
-msgstr "Administrations-Server für Ihren Kerberos-Realm:"
+msgstr "Administrativ server for dit Kerberosområde:"
 
 #. Type: string
 #. Description
@@ -133,5 +128,5 @@ msgid ""
 "Enter the hostname of the administrative (password changing) server for the "
 "${realm} Kerberos realm."
 msgstr ""
-"Geben Sie den Hostnamen des Administrations-Servers (zur Änderung von "
-"Passwörtern) für den Kerberos-Realm ${realm} ein."
+"Indtast værtsnavnet på den administrative (adgangskodeændrende) server for "
+"Kerberosområdet ${realm}."

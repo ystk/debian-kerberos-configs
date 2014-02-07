@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2009-07-21 19:21+0100\n"
 "Last-Translator: Ricardo Silva <ardoric@gmail.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,11 +31,6 @@ msgstr "Reino por omissão do Kerberos versão 5:"
 #. Type: string
 #. Description
 #: ../krb5-config.templates:2001
-#| msgid ""
-#| "When users attempt to use Kerberos and specify a principal or user name "
-#| "without specifying what administrative Kerberos realm that principal "
-#| "belongs to, the system appends the default realm.  Normally, the default "
-#| "realm is the uppercase version of the local DNS domain."
 msgid ""
 "When users attempt to use Kerberos and specify a principal or user name "
 "without specifying what administrative Kerberos realm that principal belongs "
@@ -45,8 +41,9 @@ msgstr ""
 "Quando os utilizadores tentam usar o Kerberos e especificam um principal ou "
 "um nome de utilizador sem especificar a que reino administrativo Kerberos "
 "pertencem, o sistema assume o reino por omissão. O reino por omissão também "
-"pode ser usado como o reino de um serviço Kerberos que corra na máquina local. "
-"Muitas vezes, o reino por omissão é a versão em maiúsculas do domínio DNS local."
+"pode ser usado como o reino de um serviço Kerberos que corra na máquina "
+"local. Muitas vezes, o reino por omissão é a versão em maiúsculas do domínio "
+"DNS local."
 
 #. Type: boolean
 #. Description
@@ -61,8 +58,8 @@ msgid ""
 "Typically, clients find Kerberos servers for their default realm in the "
 "domain-name system. ${dns}"
 msgstr ""
-"Tipicamente, os clientes encontram os servidores para o reino deles por omissão "
-"no sistema de nomes de domínios. ${dns}"
+"Tipicamente, os clientes encontram os servidores para o reino deles por "
+"omissão no sistema de nomes de domínios. ${dns}"
 
 #. Type: text
 #. Description
@@ -96,11 +93,12 @@ msgid ""
 "in special situations, you can locally configure the set of servers for your "
 "Kerberos realm."
 msgstr ""
-"Foram encontrados servidores para o seu reino no DNS. Na maioria das configurações "
-"é melhor usar DNS para encontrar estes servidores de modo a que se o conjunto de "
-"servidores mudar no futuro, não seja necessário reconfigurar todas as máquinas do "
-"reino individualmente. No entanto, em situações especiais, pode configurar o conjunto "
-"de servidores do seu reino Kerberos localmente."
+"Foram encontrados servidores para o seu reino no DNS. Na maioria das "
+"configurações é melhor usar DNS para encontrar estes servidores de modo a "
+"que se o conjunto de servidores mudar no futuro, não seja necessário "
+"reconfigurar todas as máquinas do reino individualmente. No entanto, em "
+"situações especiais, pode configurar o conjunto de servidores do seu reino "
+"Kerberos localmente."
 
 #. Type: string
 #. Description

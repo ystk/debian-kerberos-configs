@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2007-03-03 01:10+0900\n"
 "Last-Translator:  TANAKA, Atushi <atanaka@hotcake.halfmoon.jp>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,11 +38,11 @@ msgid ""
 "used as the realm of a Kerberos service running on the local machine.  "
 "Often, the default realm is the uppercase version of the local DNS domain."
 msgstr ""
-"利用者がケルベロスを利用しようとするとき、プリンシパルやユーザ名の属する"
-"ケルベロスの管理レルムを指定せずに使うと、そこにデフォルトのレルムが"
-"加えられます。デフォルトのレルムはローカルなマシン上のケルベロスサービスの"
-"レルムとしても使われるでしょう。多くの場合、デフォルトのレルムはローカルな "
-"DNS ドメインを大文字にしたものです。"
+"利用者がケルベロスを利用しようとするとき、プリンシパルやユーザ名の属するケル"
+"ベロスの管理レルムを指定せずに使うと、そこにデフォルトのレルムが加えられま"
+"す。デフォルトのレルムはローカルなマシン上のケルベロスサービスのレルムとして"
+"も使われるでしょう。多くの場合、デフォルトのレルムはローカルな DNS ドメインを"
+"大文字にしたものです。"
 
 #. Type: boolean
 #. Description
@@ -56,8 +57,8 @@ msgid ""
 "Typically, clients find Kerberos servers for their default realm in the "
 "domain-name system. ${dns}"
 msgstr ""
-"大抵、クライアントはデフォルトのレルムのケルベロスサーバを DNS ${dns} で"
-"見つけます。"
+"大抵、クライアントはデフォルトのレルムのケルベロスサーバを DNS ${dns} で見つ"
+"けます。"
 
 #. Type: text
 #. Description
@@ -76,11 +77,9 @@ msgid ""
 "with Debian. You may add them to the Kerberos configuration file or add them "
 "to your DNS configuration."
 msgstr ""
-"しかし、あなたが使うレルムのケルベロスサーバーは DNS にも Debian の"
-"ケルベロス設定ファイルにも記されてないようです。"
-"サーバーをケルベロスの設定ファイル、もしくは、あなたの DNS の設定に"
-"加えると良いでしょう。"
-
+"しかし、あなたが使うレルムのケルベロスサーバーは DNS にも Debian のケルベロス"
+"設定ファイルにも記されてないようです。サーバーをケルベロスの設定ファイル、も"
+"しくは、あなたの DNS の設定に加えると良いでしょう。"
 
 #. Type: text
 #. Description
@@ -92,11 +91,10 @@ msgid ""
 "in special situations, you can locally configure the set of servers for your "
 "Kerberos realm."
 msgstr ""
-"サーバーが DNS で見つかりました。大抵は DNS でサーバーを探すべきです。"
-"というのも、サーバーが代わっても個々のマシンを再設定しないで良いから"
-"です。ただし、特別な状況では、ローカルにケルベロスレルムのサーバーを"
-"設定することはできます。"
-
+"サーバーが DNS で見つかりました。大抵は DNS でサーバーを探すべきです。という"
+"のも、サーバーが代わっても個々のマシンを再設定しないで良いからです。ただし、"
+"特別な状況では、ローカルにケルベロスレルムのサーバーを設定することはできま"
+"す。"
 
 #. Type: string
 #. Description
